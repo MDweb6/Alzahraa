@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header{
+    
+    position: sticky;
+    top: 0;
+    z-index: 99; 
+    display: flex;
+    background-color: #FFFDF6;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.head1{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: left;
+    padding: 10px;
+    padding-left: 20px;
+}
+.head1 h1{
+    color: #A0C878;
+    font-family: "Teko", sans-serif;
+    
+}
+.head2{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: left;
+    padding: 10px;
+}
+.head2 nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head2 nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+.head2 nav ul li a{
+    text-decoration: none;
+    color: #A0C878;
+    font-family: "Poppins", sans-serif;
+}
+
+.active{
+    border-bottom: 2px solid #A0C878;
+}
+
+.head3{
+    display: none;
+}
+
+.DateTime{
+    padding: 10px;
+    background-color: #FFFDF6;
+}
+
+
+
+   .prayer-section {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    .timeline {
+      position: relative;
+      height: 60px;
+    }
+
+    .line-bg {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 80%;
+      height: 3px;
+      background-color: #4caf50;
+      z-index: 1;
+      border-radius: 4px;
+    }
+
+
+
+    .prayer-marker {
+      position: absolute;
+      width: 2px;
+      height: 14px;
+      top: calc(50% - 7px);
+      z-index: 3;
+      background-color: #4caf50; /* default beige */
+      transition: background-color 0.3s ease;
+    }
+
+
+    .prayer-time {
+      position: absolute;
+      top: calc(50% - 30px);
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+    }
+
+    .prayer-label {
+      position: absolute;
+      top: calc(50% + 10px);
+      transform: translateX(-50%);
+      font-size: 0.65rem;
+      text-align: center;
+    }
+
+    .prayer-label span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: 'Noto Naskh Arabic', serif;
+      color: #666;
+    }
+
+    .fajr { left: 10%; }
+    .dhuhr { left: 30%; }
+    .asr { left: 50%; }
+    .maghrib { left: 70%; }
+    .isha { left: 90%; }
+
+
+
+
+
+@media (max-width: 768px){
+    
+
+
+.head1{
+    width: 50%;
+}
+.head1 h1{
+    font-size: 1.5rem;
+}
+.head2{
+    display: none;
+}
+
+.head3{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+.head3 i{
+    color: #A0C878;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
