@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 body{
+    padding: 0;
+    margin: 0;
     height: 100vh;
     box-sizing: border-box;
 }
@@ -76,6 +78,30 @@ header{
     background-color: #FFFDF6;
 }
 
+.Sec1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.OmIslam{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    padding: 50px;
+    background-image: url(images/mhrezaa-ozF-3ed3pPM-unsplash.jpg);
+    background-size: cover;
+    width: 98%;
+    height: 400px;
+    border-radius: 5px;
+}
+.OmIslam h2{
+    font-family: 'poppins';
+}
+
+
 
 
    .prayer-section {
@@ -144,7 +170,9 @@ header{
     .isha { left: 90%; }
 
 
-
+.NavForMobile{
+    display: none;
+}
 
 
 @media (max-width: 768px){
@@ -155,7 +183,7 @@ header{
     width: 50%;
 }
 .head1 h1{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .head2{
     display: none;
@@ -171,7 +199,23 @@ header{
 }
 .head3 i{
     color: #A0C878;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+}
+
+
+.NavForMobile{
+    display: none;
+    background-color: #FFFDF6;
+    width: 230px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    right: 0;
+}
+
+
+
 }
 
 
@@ -179,9 +223,42 @@ header{
 
 
 
-}
 
+    /* Modal-overlay */
+    .loader-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: beige;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
 
+    .loader-modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ccc;
+      border-top-color: #333;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
 
 
 
