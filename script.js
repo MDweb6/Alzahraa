@@ -30,12 +30,26 @@ fetch('https://api.aladhan.com/v1/timingsByCity?city=Boras&country=Sweden&method
       document.getElementById('loaderModal').classList.remove('active');
     }
 
-    // Exempel: visa loader i 2 sekunder när sidan laddas
     window.addEventListener('load', () => {
       showLoader();
-      setTimeout(hideLoader, 500);
+      setTimeout(hideLoader, 600);
     });
 
+
+
+let sida1 = document.querySelector(".sida1");
+if (sida1) {
+  sida1.addEventListener("click", function() {
+    window.location.href = "index.html";  // Navigera till index.html i samma fönster
+  });
+}
+
+let sida2 = document.querySelector(".sida2");
+if (sida2) {
+  sida2.addEventListener("click", function() {
+    window.location.href = "sida2.html";  // Navigera till sida2.html i samma fönster
+  });
+}
 
 
 
