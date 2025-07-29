@@ -1,14 +1,22 @@
-
 let HemburgerMenu = document.getElementById("HemburgerMenu");
 let CloseMenu = document.getElementById("CloseMenu");
 let NavForMobile = document.querySelector(".NavForMobile");
 
 HemburgerMenu.addEventListener('click', function(){
   NavForMobile.style.display = "block";
-})
+  setTimeout(() => {
+    NavForMobile.classList.add("open");
+  }, 10);
+});
+
 CloseMenu.addEventListener('click', function(){
-  NavForMobile.style.display = "none";
-})
+  NavForMobile.classList.remove("open");
+  NavForMobile.addEventListener('transitionend', function handler(){
+    NavForMobile.style.display = "none";
+    NavForMobile.removeEventListener('transitionend', handler);
+  });
+});
+
 
 
 fetch('https://api.aladhan.com/v1/timingsByCity?city=Boras&country=Sweden&method=8')

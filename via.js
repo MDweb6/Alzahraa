@@ -1,4 +1,4 @@
-let spanID = document.getElementById("dagen");
+let spanID = document.querySelector(".dagen");
 let datum = new Date();
 let dagen = datum.getDay();
 

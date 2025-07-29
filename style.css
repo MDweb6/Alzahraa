@@ -265,16 +265,24 @@ header{
 }
 
 
-.NavForMobile{
-    display: none;
-    background-color: #FFFDF6;
-    width: 230px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    right: 0;
+.NavForMobile {
+  background-color: #FFFDF6;
+  width: 230px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0; /* Menyn sitter längst till höger */
+  z-index: 100;
+  transform: translateX(100%); /* Börja utanför till höger */
+  transition: transform 0.3s ease-in-out;
+  display: block; /* Alltid block */
 }
+
+/* När menyn är öppen */
+.NavForMobile.open {
+  transform: translateX(0); /* In på skärmen */
+}
+
 .NavForMobileHead{
     margin: 1px;
     width: 100%;
@@ -413,6 +421,45 @@ header{
 }
 .OmIslamTxt p strong,a{
     color: #4caf50;
+}
+
+
+
+
+
+
+
+
+
+/*Sida2.html css*/
+.Sida2Sec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    margin-top: 20px;
+}
+
+.OmIslamTxtHela{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+}
+
+.OmIslamTxtHela p{
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+}
+.OmIslamTxtHela p strong{
+    color: #4caf50;
+}
+.OmIslamTxtHela a{
+    color: #4caf50;
+    width: 23%;
 }
 
 
