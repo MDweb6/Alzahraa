@@ -39,7 +39,7 @@ header{
     
 }
 .head2{
-    width: 60%;
+    width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -65,7 +65,21 @@ header{
     font-family: "Poppins", sans-serif;
     cursor: pointer;
 }
-
+.HeadBtn{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeadBtn button{
+    background-color: #A0C878;
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 1rem;
+}
 .active{
     border-bottom: 2px solid #A0C878;
 }
@@ -74,13 +88,12 @@ header{
     display: none;
 }
 
+
 .DuaBox{
     width: 100%;
-    height: 95%;
+    height: 100vh;
     background-color: #FFFDF6;
-    position: fixed;
-    z-index: 99;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -96,17 +109,12 @@ header{
 .DuaBox span{
     font-family: "Noto Kufi Arabic", sans-serif;
     width: 500px;
-    overflow: scroll;
-    overflow-x: hidden;
     text-align: center;
     padding: 20px;
-    padding-bottom: 60px;
     border-radius: 15px;
     background-color: beige;
 }
-.DuaBox span::-webkit-scrollbar {
-  display: none;
-}
+
 
 
 
@@ -299,7 +307,9 @@ header{
     color: #A0C878;
     font-size: 1.6rem;
 }
-
+.HeadBtn{
+    display: none;
+}
 
 .NavForMobile {
   background-color: #FFFDF6;
@@ -381,11 +391,9 @@ header{
 
 .DuaBox{
     width: 100%;
-    height: 100%;
+    height: 160vh;
     background-color: #FFFDF6;
-    position: fixed;
-    z-index: 99;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -400,18 +408,13 @@ header{
 .DuaBox span{
     font-family: "Noto Kufi Arabic", sans-serif;
     width: 300px;
-    height: 75%;
-    overflow: scroll;
-    overflow-x: hidden;
     text-align: center;
     padding: 20px;
     padding-bottom: 30px;
     border-radius: 5px;
     background-color: beige;
 }
-.DuaBox span::-webkit-scrollbar {
-  display: none;
-}
+
 
 
 .DuaDiv{

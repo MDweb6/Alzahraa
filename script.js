@@ -47,12 +47,15 @@ fetch('https://api.aladhan.com/v1/timingsByCity?city=Boras&country=Sweden&method
     });
 
 
-let VisaDua = document.querySelector(".VisaDua")
-let DuaBox = document.querySelector(".DuaBox")
-VisaDua.addEventListener("click", function(){
-    NavForMobile.classList.remove("open");
-  DuaBox.style.display = "flex"
-})
+let VisaDua = document.querySelectorAll(".VisaDua");
+
+VisaDua.forEach(function(element) {
+  element.addEventListener("click", function() {
+    // Om du vill navigera till ny sida:
+    window.location.href = "Dua.html";
+  });
+});
+
 
 
 let sida1 = document.querySelectorAll(".sida1");
