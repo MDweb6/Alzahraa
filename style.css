@@ -244,8 +244,6 @@ header{
     margin: 1px;
     width: 100%;
     height: 10%;
-    background-color: beige;
-    border: 1px solid black;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -262,15 +260,12 @@ header{
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    background-color: beige;
 }
 .NavBoxen{
     margin: 1px;
     height: 60%;
     width: 100%;
-    border: 1px solid black;
     border-top: none;
-    background-color: beige;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,6 +292,8 @@ header{
     color: #A0C878;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
+    font-size: 1.3rem;
+    
 }
 
 .active{
@@ -307,9 +304,7 @@ header{
     margin: 1px;
     height: 40%;
     width: 100%;
-    border: 1px solid black;
     border-top: none;
-    background-color: beige;
     display: flex;
     align-items: center;
     justify-content: end;
