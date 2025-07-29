@@ -59,12 +59,37 @@ header{
     gap: 40px;
     list-style: none;
 }
-.head2 nav ul li a{
+.head2 nav ul li a {
     text-decoration: none;
     color: #A0C878;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
+    position: relative;
 }
+
+/* Baslinje som animera in vid hover eller om länken är aktiv */
+.head2 nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #A0C878;
+    transition: width 0.3s ease;
+}
+
+/* Hover-effekt */
+.head2 nav ul li a:hover::after {
+    width: 80%;
+}
+
+/* Aktiv länk – redan markerad */
+.head2 nav ul li a.active::after {
+    width: 100%;
+}
+
+
 .HeadBtn{
     width: 20%;
     display: flex;
@@ -80,42 +105,12 @@ header{
     border-radius: 15px;
     font-size: 1rem;
 }
-.active{
-    border-bottom: 2px solid #A0C878;
-}
+
+
 
 .head3{
     display: none;
 }
-
-
-.DuaBox{
-    width: 100%;
-    height: 100vh;
-    background-color: #FFFDF6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    gap: 20px;
-    padding: 50px;
-}
-
-.DuaBox h2{
-    font-family: 'poppins', sans-serif;
-    border-bottom: 2px solid #4caf50;
-}
-.DuaBox span{
-    font-family: "Noto Kufi Arabic", sans-serif;
-    width: 500px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: beige;
-}
-
-
 
 
 .DateTime{
@@ -278,12 +273,50 @@ header{
     color: #4caf50;
 }
 
+/*Dua.html css*/
+.DuaBox{
+    margin-top: 10px;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+    padding: 50px;
+}
+
+.DuaBox h2{
+    font-family: 'poppins', sans-serif;
+    border-bottom: 2px solid #4caf50;
+    
+}
+.DuaBox span{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    width: 500px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: beige;
+}
 
 
 
 @media (max-width: 768px){
     
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
 
 .head1{
     width: 50%;
@@ -357,12 +390,13 @@ header{
     border-top: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     flex-direction: column;
+
 }
 
 .NavBoxen nav{
-    height: 40%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,46 +410,34 @@ header{
     gap: 20px;
     list-style: none;
 }
-.NavBoxen nav ul li a{
+.NavBoxen nav ul li a {
     text-decoration: none;
     color: #A0C878;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     font-size: 1.3rem;
-    
+    text-align: left;
+    position: relative;
 }
 
-.active{
-    border-bottom: 2px solid #A0C878;
+.NavBoxen nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #A0C878;
+    transition: width 0.3s ease;
 }
 
-.DuaBox{
+.NavBoxen nav ul li a:hover::after {
+    width: 80%;
+}
+
+.NavBoxen nav ul li a.active::after {
     width: 100%;
-    height: 160vh;
-    background-color: #FFFDF6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
 }
-
-.DuaBox h2{
-    font-family: 'poppins', sans-serif;
-    border-bottom: 2px solid #4caf50;
-}
-.DuaBox span{
-    font-family: "Noto Kufi Arabic", sans-serif;
-    width: 300px;
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 30px;
-    border-radius: 5px;
-    background-color: beige;
-}
-
-
 
 .DuaDiv{
     margin: 1px;
@@ -535,6 +557,37 @@ header{
     color: #4caf50;
     width: 23%;
 }
+
+
+/*Dua.html css*/
+
+.DuaBox{
+    width: 100%;
+    height: 160vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    padding: 50px;
+}
+
+.DuaBox h2{
+    font-family: 'poppins', sans-serif;
+    border-bottom: 2px solid #4caf50;
+}
+.DuaBox span{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background-color: beige;
+}
+
+
 
 
 }
