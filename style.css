@@ -121,16 +121,66 @@ header{
     background-color: #FFFDF6;
 }
 
+.OmOss{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 120vh;
+    margin-top: 20px;
+}
+.bilden{
+    background-image: url(images/syed-aoun-abbas-97o4XH0htUs-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 95%;
+    height: 55%;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+.bilden h2{
+    padding: 5px;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    background-color: #4caf50;
+}
+.OmTexten{
+    width: 98%;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.OmTexten h3{
+    font-family: 'poppins',sans-serif;
+    border-bottom: 2px solid #4caf50;
+    width: 10%;
+}
+.OmTexten p{
+    font-family: 'quicksand', sans-serif;
+    width: 80%;
+    font-size: 1.1rem;
+}
+.OmTexten p strong{
+    color: #4caf50;
+}
+
+
+
+
 .Sec1{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 65vh;
-    margin-top: 20px;
+    margin-top: 25px;
+
 }
-
-
 
 .OmIslamPc{
     width: 100%;
@@ -468,6 +518,53 @@ body{
 }
 
 
+.OmOss{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 130vh;
+    margin-top: 20px;
+}
+.bilden{
+    background-image: url(images/syed-aoun-abbas-97o4XH0htUs-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 95%;
+    height: 45%;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+.bilden h2{
+    padding: 5px;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    background-color: #4caf50;
+}
+.OmTexten{
+    width: 98%;
+    height: 40%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.OmTexten h2{
+    font-family: 'poppins',sans-serif;
+    border-bottom: 2px solid #4caf50;
+    width: 40%;
+}
+.OmTexten p{
+    font-family: 'quicksand', sans-serif;
+    width: 98%;
+    font-size: 1.1rem;
+}
+.OmTexten p strong{
+    color: #4caf50;
+}
 
 
 .Sec1{
