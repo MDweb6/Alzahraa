@@ -48,8 +48,8 @@
             <nav>
                 <ul>
                     <li><a class="sida1 active">Hem</a></li>
-                    <li><a class="sida2">Islam</a></li>
-                    <li><a href="#">Övrigt</a></li>
+                    <li><a class="sida2">Övrigt</a></li>
+                    <li><a class="sida3">Kontakta</a></li>
                 </ul>
             </nav>
         </div>
@@ -76,9 +76,9 @@
 
                 <nav>
                     <ul>
-                        <li><a class="sida1 active">Hem</a></li>
-                        <li><a class="sida2">Islam</a></li>
-                        <li><a href="#">Övrigt</a></li>
+                    <li><a class="sida1 active">Hem</a></li>
+                    <li><a class="sida2">Övrigt</a></li>
+                    <li><a class="sida3">Kontakta</a></li>
                     </ul>
                 </nav>
             </div>
@@ -153,42 +153,47 @@
     </section>
 
     
-    <section class="Sec1">
 
 
+    <section class="OvSec" id="OvSec">
+        <h2>Övrigt</h2>
+        <div class="Container">
 
-        <div class="OmIslamPc">
-            <div class="OmIslamImg">
-                <img src="images/mhrezaa-ozF-3ed3pPM-unsplash.jpg" alt="">
+            <div class="box">
+                <img src="images/defrino-maasy-0TwA0UDKHl8-unsplash.jpg">
+                <div class="boxTxt">
+                    <h3><a href="#">Islam</a></h3>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius, autem repellat totam rerum libero quasi animi quae corporis eos sed ipsam. Accusamus cumque excepturi, error vero optio inventore nisi repudiandae est laboriosam impedit neque.
+                    </p>
+                </div>
             </div>
 
-            <div class="OmIslamTxt">
-                <h2>Om islam</h2>
-                <p>
-                    Shia Islam är en gren inom Islam där betoningen ligger på att följa
-                    ledarskapet hos de <strong>Imamer</strong> som anses vara Guds valda
-                    ledare. 
+            <div class="box">
+                <img src="images/imam.jpg">
+                <div class="boxTxt">
+                    <h3><a href="">Imammer</a></h3>
 
-                    <br> <br>
-
-                    Shiamuslimer tror att profeten Muhammed, när han gick bort, utnämnde 
-                    sin svärson och kusin, <strong>Ali ibn Abi Talib</strong>, som sin rättmätige 
-                    efterträdare. En viktig tro inom Shia-Islam är att <strong>Ali</strong> och hans 
-                    ättlingar, de <strong>tolv Imamerna</strong>, inte bara är politiska ledare utan också
-                    andliga förebilder och besitter särskild kunskap om Guds vilja.
-
-                    <br><br>
-
-                    Shiamuslimer följer de grundläggande pelarna
-                    inom Islam, såsom de fem dagliga bönerna, fastan under Ramadan, 
-                    och Zakat (välgörenhet). <br>
-                    <a href="sida2.html">Läs mer</a>
-                </p>
-
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius, autem repellat totam rerum libero quasi animi quae corporis eos sed ipsam. Accusamus cumque excepturi, error vero optio inventore nisi repudiandae est laboriosam impedit neque.
+                    </p>
+                </div>
             </div>
+
+            <div class="box">
+                <img src="images/syed-aoun-abbas-v__B86PhdM0-unsplash.jpg">
+                <div class="boxTxt">
+                    <h3><a href="#">Bön</a></h3>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius, autem repellat totam rerum libero quasi animi quae corporis eos sed ipsam. Accusamus cumque excepturi, error vero optio inventore nisi repudiandae est laboriosam impedit neque.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
-
 
 
 
@@ -198,6 +203,41 @@
      </div>
 
 
+
+
+
+
+
+     <footer>
+        <h2>Kontakta oss via:</h2>
+        <a href="mailto:alzahraa.forening@yahoo.se">alzahraa.forening@yahoo.se</a>
+     </footer>
+        <div id="slutet" class="slutet">
+            <span>
+                <p>&copy; 2025 Alzahraa. Designed & Developed by <a href="https://github.com\MDweb6" target="_blank" rel="noopener">MDweb6</a>.</p>
+            </span>
+        </div>
+
+
+
+
+
+
+
+     <script>
+        window.addEventListener("DOMContentLoaded", function () {
+  const scrollToId = sessionStorage.getItem("scrollTo");
+
+  if (scrollToId) {
+    const target = document.getElementById(scrollToId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    sessionStorage.removeItem("scrollTo");
+  }
+});
+
+     </script>
     <script src="https://kit.fontawesome.com/6a817012d4.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="via.js"></script>

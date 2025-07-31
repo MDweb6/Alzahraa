@@ -66,13 +66,25 @@ sida1.forEach(function(element) {
 });
 
 let sida2 = document.querySelectorAll(".sida2");
+
 sida2.forEach(function(element) {
-  element.addEventListener("click", function() {
-    window.location.href = "sida2.html";
+  element.addEventListener("click", function(e) {
+    e.preventDefault(); // Hindra direkt klick
+    sessionStorage.setItem("scrollTo", "OvSec"); // Spara vilket element vi vill scrolla till
+    window.location.href = "index.html"; // Skicka till startsidan
   });
 });
 
 
+let sida3 = document.querySelectorAll(".sida3");
+
+sida3.forEach(function(element) {
+  element.addEventListener("click", function(e) {
+    e.preventDefault(); // Hindra direkt klick
+    sessionStorage.setItem("scrollTo", "slutet"); // Spara vilket element vi vill scrolla till
+    window.location.href = "index.html"; // Skicka till startsidan
+  });
+});
 
 
 let LogoIndex = document.getElementById("LogoIndex");
