@@ -36,7 +36,7 @@ header{
 .head1 h1{
     color: #A0C878;
     font-family: "Teko", sans-serif;
-    
+    cursor: pointer;
 }
 .head2{
     width: 40%;
@@ -295,6 +295,7 @@ header{
 }
 .boxTxt h3 a{
     color: #333;
+    text-decoration: none;
 }
 .boxTxt p{
     font-family: 'quicksand', sans-serif;
@@ -318,6 +319,7 @@ footer h2{
 }
 footer a{
     font-family: 'quicksand', sans-serif;
+    text-decoration: none;
 }
 .slutet{
     background-color: #FFFDF6;
@@ -610,7 +612,7 @@ body{
 
 .OvSec{
     width: 100%;
-    height: 250vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -628,16 +630,16 @@ body{
 }
 .Container{
     width: 98%;
-    height: 95%;
+    height: 100%;
     border-top: 2px solid #4caf50;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    margin-top: 10px;
 }
 .box{
-    margin-top: 10px;
+    margin-top: 0px;
     width: 98%;
     height: 30%;
     background-color: #FFFDF6;
@@ -677,6 +679,20 @@ body{
     font-size: 0.8rem;
     font-family: 'poppins',sans-serif;
 }
+
+
+
+footer{
+    margin-top: 40px;
+    width: 100%;
+    background-color: beige;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 
 
 
