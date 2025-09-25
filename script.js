@@ -17,6 +17,21 @@ CloseMenu.addEventListener('click', function(){
   });
 });
 
+let Langu = document.querySelector(".Langu");
+let LanguSide = document.querySelector(".LanguSide");
+
+Langu.addEventListener('click', function() {
+  // Kolla om border-radius redan är satt
+  if (Langu.style.borderRadius === "0px 15px 15px 0px") {
+    // Om ja, återställ till standard
+    Langu.style.borderRadius = ""; // tar bort inline-stilen
+    LanguSide.style.display = "none";
+  } else {
+    Langu.style.borderRadius = "0px 15px 15px 0px";
+    LanguSide.style.display = "flex";
+  }
+});
+
 
 
 fetch('https://api.aladhan.com/v1/timingsByCity?city=Boras&country=Sweden&method=8')

@@ -188,6 +188,45 @@ header{
     display: none;
 }
 
+.SprakSkrift{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 20%;
+    height: 20%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    
+}
+.Langu{
+    background-color: #4caf50;
+    width: 35%;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.Langu i{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.LanguSide{
+    background-color: #4caf50;
+    width: 60%;
+    height: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 15px 15px 0px 15px;
+}
+.LanguSide h3{
+    color: #fff;
+}
+
 
 
 /*index.html*/
@@ -553,6 +592,46 @@ body{
     color: #fff;
     border-radius: 15px;
     font-size: 1rem;
+}
+
+.SprakSkrift{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45%;
+    height: 20%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    
+}
+.Langu{
+    background-color: #4caf50;
+    width: 40%;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.Langu i{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.LanguSide{
+    background-color: #4caf50;
+    width: 60%;
+    height: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 15px 15px 0px 15px;
+}
+.LanguSide h3{
+    color: #fff;
+    
 }
 
 
