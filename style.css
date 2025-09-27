@@ -221,13 +221,46 @@ header{
     display: none;
     justify-content: center;
     align-items: center;   
+    flex-direction: column;
     border-radius: 15px 15px 0px 15px;
-}
-.LanguSide h3{
-    color: #fff;
+    padding: 15px;
+    gap: 10px;
 }
 
+.Lang1{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+.Lang1 img{
+    width: 20px;
+    height: 10px;
+}
+.Lang1, .Lang2 span{
+    font-family: 'Poppins', sans-serif;
+}
 
+.Lang2{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+.Lang2 img{
+    width: 20px;
+    height: 10px;
+}
 
 /*index.html*/
 
@@ -598,16 +631,15 @@ body{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 45%;
+    width: 55%;
     height: 20%;
     display: flex;
     justify-content: right;
     align-items: end;
-    
 }
 .Langu{
     background-color: #4caf50;
-    width: 40%;
+    width: 30%;
     height: 40%;
     padding: 20px;
     display: flex;
@@ -622,7 +654,7 @@ body{
 
 .LanguSide{
     background-color: #4caf50;
-    width: 60%;
+    width: 70%;
     height: 80%;
     display: none;
     justify-content: center;
@@ -634,7 +666,40 @@ body{
     
 }
 
+.Lang1{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+.Lang1 img{
+    width: 20px;
+    height: 10px;
+}
+.Lang1, .Lang2 span{
+    font-family: 'Poppins', sans-serif;
+}
 
+.Lang2{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+.Lang2 img{
+    width: 20px;
+    height: 10px;
+}
 
 /*index.html*/
 

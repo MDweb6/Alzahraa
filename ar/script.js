@@ -112,6 +112,18 @@ if (LogoIndex) {
 
 
 
+    // Hämta elementen
+    const arabic = document.querySelector('.Lang1');
+    const swedish = document.querySelector('.Lang2');
+
+    // Lägg till klick-händelser
+    arabic.addEventListener('click', () => {
+        window.location.href = 'ar/ar.html'; // Skickar till ar.html
+    });
+
+    swedish.addEventListener('click', () => {
+        window.location.href = '../index.html'; // Skickar till sv.html
+    });
 
 
 
