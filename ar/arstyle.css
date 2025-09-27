@@ -1,0 +1,893 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+
+}
+
+header{
+    
+    position: sticky;
+    top: 0;
+    z-index: 99; 
+    display: flex;
+    background-color: #FFFDF6;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.head1{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+    padding-right: 20px;
+}
+.head1 h1{
+    color: #A0C878;
+  font-family: "Cairo", sans-serif;
+    cursor: pointer;
+}
+.Rurb{
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+.head2{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 10px;
+}
+.head2 nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.head2 nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    flex-direction: row-reverse;
+}
+.head2 nav ul li a {
+    text-decoration: none;
+    color: #A0C878;
+  font-family: "Noto Kufi Arabic", sans-serif;
+    cursor: pointer;
+    position: relative;
+}
+
+.head2 nav ul li a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #A0C878;
+    transition: width 0.3s ease;
+}
+
+.head2 nav ul li a:hover::after {
+    width: 80%;
+}
+
+.head2 nav ul li a.active::after {
+    width: 100%;
+}
+
+
+.HeadBtn{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeadBtn button{
+    background-color: #A0C878;
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    cursor: pointer;
+}
+
+
+
+
+.head3{
+    display: none;
+}
+
+
+.DateTime{
+    padding: 10px;
+    background-color: #FFFDF6;
+}
+
+   .prayer-section {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    .timeline {
+      position: relative;
+      height: 60px;
+    }
+
+    .line-bg {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 80%;
+      height: 3px;
+      background-color: #4caf50;
+      z-index: 1;
+      border-radius: 4px;
+    }
+
+
+
+    .prayer-marker {
+      position: absolute;
+      width: 2px;
+      height: 14px;
+      top: calc(50% - 7px);
+      z-index: 3;
+      background-color: #4caf50; /* default beige */
+      transition: background-color 0.3s ease;
+    }
+
+
+    .prayer-time {
+      position: absolute;
+      top: calc(50% - 30px);
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+    }
+
+    .prayer-label {
+      position: absolute;
+      top: calc(50% + 10px);
+      transform: translateX(-50%);
+      font-size: 0.65rem;
+      text-align: center;
+    }
+
+    .prayer-label span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: 'Noto Naskh Arabic', serif;
+      color: #666;
+    }
+
+    .fajr { left: 10%; }
+    .dhuhr { left: 30%; }
+    .asr { left: 50%; }
+    .maghrib { left: 70%; }
+    .isha { left: 90%; }
+
+
+.NavForMobile{
+    display: none;
+}
+
+.SprakSkrift{
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    width: 20%;
+    height: 20%;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    flex-direction: row-reverse;
+    
+}
+.Langu{
+    background-color: #4caf50;
+    width: 35%;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.Langu i{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.LanguSide{
+    background-color: #4caf50;
+    width: 60%;
+    height: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 15px 15px 15px 0px;
+}
+.LanguSide h3{
+    color: #fff;
+}
+
+
+
+/*ar.html*/
+
+.OmOss{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 120vh;
+    margin-top: 20px;
+}
+.bilden{
+    background-image: url(images/syed-aoun-abbas-97o4XH0htUs-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 95%;
+    height: 55%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    border-radius: 15px 15px 0px 0px;
+}
+.bilden h2{
+    padding: 5px;
+    color: #fff;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: #4caf50;
+}
+.OmTexten{
+    width: 95%;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: #FFFDF6;
+}
+.OmTexten h2{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    border-bottom: 2px solid #4caf50;
+    width: 13%;
+    color: #333;
+    text-align: right;
+}
+.OmTexten p{
+    font-family: 'quicksand', sans-serif;
+    width: 80%;
+    font-size: 1.1rem;
+    text-align: right;
+}
+.OmTexten p strong{
+    color: #4caf50;
+}
+
+
+.OvSec{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 40px;
+}
+.OvSec h2{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 5px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Container{
+    width: 98%;
+    height: 95%;
+    border-top: 2px solid #4caf50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 40px;
+}
+.box{
+    margin-top: 10px;
+    width: 25%;
+    height: 95%;
+    background-color: #FFFDF6;
+    border-radius: 5px;
+    padding: 5px;
+}
+.box img{
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+}
+.boxTxt{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boxTxt h3{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    border-bottom: 2px solid #4caf50;
+    text-align: right;
+}
+.boxTxt h3 a{
+    color: #333;
+    text-decoration: none;
+}
+.boxTxt p{
+    font-family: 'quicksand', sans-serif;
+    margin-top: 5px;
+    text-align: right;
+}
+
+
+
+footer{
+    margin-top: 80px;
+    width: 100%;
+    background-color: beige;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+footer h2{
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+footer a{
+    font-family: 'quicksand', sans-serif;
+    text-decoration: none;
+}
+.slutet{
+    background-color: #FFFDF6;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slutet span{
+    font-size: 1rem;
+    font-family: 'poppins',sans-serif;
+}
+
+
+/*Ovrigt.html css*/
+.Sida2Sec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 20px;
+}
+
+.OmIslamTxtHela{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.OmIslamTxtHela h2{
+    font-family: 'poppins',sans-serif;
+    border-bottom: 2px solid #4caf50;
+    width: 20%;
+}
+.OmIslamTxtHela p{
+    font-family: 'Quicksand', sans-serif;
+    width: 90%;
+}
+.OmIslamTxtHela p strong,a{
+    color: #4caf50;
+}
+
+/*Dua.html css*/
+.DuaBox{
+    margin-top: 10px;
+    width: 100%;
+    height: 120vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+    padding: 50px;
+}
+
+.DuaBox h2{
+    font-family: 'poppins', sans-serif;
+    border-bottom: 2px solid #4caf50;
+    
+}
+.DuaBox span{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    width: 500px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: beige;
+    text-align: right;
+}
+
+
+
+@media (max-width: 768px){
+    
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.head1{
+    width: 50%;
+}
+.head1 h1{
+    font-size: 1.4rem;
+}
+.head2{
+    display: none;
+}
+
+.head3{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+.head3 i{
+    color: #A0C878;
+    font-size: 1.6rem;
+}
+.HeadBtn{
+    display: none;
+}
+
+.NavForMobile {
+  background-color: #FFFDF6;
+  width: 230px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; /* Menyn sitter längst till höger */
+  z-index: 100;
+  transform: translateX(-100%); /* Börja utanför till höger */
+  transition: transform 0.3s ease-in-out;
+  display: block; /* Alltid block */
+}
+
+/* När menyn är öppen */
+.NavForMobile.open {
+  transform: translateX(0); /* In på skärmen */
+}
+
+.NavForMobileHead{
+    margin: 1px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;
+}
+.NavForMobileHead i{
+    font-size: 1.7rem;
+    color: #A0C878;
+}
+.Naven{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.NavBoxen{
+    margin: 1px;
+    height: 60%;
+    width: 100%;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+
+}
+
+.NavBoxen nav{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.NavBoxen nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+.NavBoxen nav ul li a {
+    text-decoration: none;
+    color: #A0C878;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    cursor: pointer;
+    font-size: 1.3rem;
+    text-align: left;
+    position: relative;
+}
+
+
+
+.DuaDiv{
+    margin: 1px;
+    height: 40%;
+    width: 100%;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+}
+.DuaDiv p,span{
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+.DuaDiv button{
+    background-color: #4caf50;
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 1rem;
+      font-family: "Noto Kufi Arabic", sans-serif;
+
+}
+
+.SprakSkrift{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45%;
+    height: 20%;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    
+}
+.Langu{
+    background-color: #4caf50;
+    width: 40%;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.Langu i{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.LanguSide{
+    background-color: #4caf50;
+    width: 60%;
+    height: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 15px 15px 15px 0px;
+}
+.LanguSide h3{
+    color: #fff;
+    
+}
+
+
+
+/*ar.html*/
+
+.OmOss{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 130vh;
+    margin-top: 20px;
+}
+.bilden{
+    background-image: url(images/syed-aoun-abbas-97o4XH0htUs-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 95%;
+    height: 45%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.bilden h2{
+    padding: 5px;
+    color: #fff;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: #4caf50;
+}
+.OmTexten{
+    width: 98%;
+    height: 60%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.OmTexten h2{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    border-bottom: 2px solid #4caf50;
+    width: 40%;
+}
+.OmTexten p{
+    width: 98%;
+    font-size: 1.1rem;
+}
+.OmTexten p strong{
+    color: #4caf50;
+}
+
+
+
+
+.OvSec{
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 80px;
+
+}
+.OvSec h2{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 5px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Container{
+    width: 98%;
+    height: 100%;
+    border-top: 2px solid #4caf50;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.box{
+    margin-top: 0px;
+    width: 98%;
+    height: 30%;
+    background-color: #FFFDF6;
+    border-radius: 5px;
+    padding: 5px;
+}
+.box img{
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+}
+.boxTxt{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boxTxt h3{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    border-bottom: 2px solid #4caf50;
+}
+.boxTxt p{
+    font-family: 'quicksand', sans-serif;
+    margin-top: 5px;
+}
+.foten{
+    margin-top: 30px;
+    width: 100%;
+    background-color: beige;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.slutet span{
+    font-size: 0.8rem;
+    font-family: 'poppins',sans-serif;
+}
+
+
+
+footer{
+    margin-top: 40px;
+    width: 100%;
+    background-color: beige;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+/*Sida2.html css*/
+.Sida2Sec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    margin-top: 20px;
+}
+
+.OmIslamTxtHela{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+}
+
+.OmIslamTxtHela p{
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+}
+.OmIslamTxtHela p strong{
+    color: #4caf50;
+}
+.OmIslamTxtHela a{
+    color: #4caf50;
+    width: 23%;
+}
+
+
+/*Dua.html css*/
+
+.DuaBox{
+    width: 100%;
+    height: 160vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    padding: 50px;
+}
+
+.DuaBox h2{
+    font-family: 'poppins', sans-serif;
+    border-bottom: 2px solid #4caf50;
+}
+.DuaBox span{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background-color: beige;
+    text-align: right;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+    /* Modal-overlay */
+    .loader-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: beige;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .loader-modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ccc;
+      border-top-color: #333;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+
+
+
