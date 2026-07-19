@@ -191,6 +191,23 @@ header{
     .isha { left: 90%; }
 
 
+
+
+.AllPray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AllPray h5 a{
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    border: 2px dotted gray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+
 .NavForMobile{
     display: none;
 }

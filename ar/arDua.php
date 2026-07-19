@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="arstyle.css">
     <title>Alzahraa Förening</title>
-<link rel="icon" href="...">
+
 
 <!--Fonts-->
+
+<!--CairoArFonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lalezar&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
 
 
 <!--Teko-->
@@ -38,26 +47,23 @@
 </head>
 <body>
     
-
     <header>
         <div class="head1">
-            <h1 id="LogoIndex">Alzahraa Förening</h1>
+            <h1 id="LogoIndex">جمعية الزهراء</h1>
         </div>
 
         <div class="head2">
             <nav>
                 <ul>
-                    <li><a class="sida1">Hem</a></li>
-                    <li><a class="sida2">Övrigt</a></li>
-                    <li><a class="sida3">Kontakta</a></li>
+                    <li><a href="ar.php" class="sida1">الصفحة الرئيسية</a></li>
+                    <li><a href="ar.php" class="sida2">أخرى</a></li>
+                    <li><a href="ar.php" class="sida3">تواصل معنا</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="HeadBtn">
-            <button class="VisaDua" style="display: none;">Dagens Dua`a</button>
-            <p>Gå till <a href="index.html">startsidan</a></p>
-
+            <button class="VisaDua">دعاء يوم</button>
         </div>
 
         <div class="head3">
@@ -78,23 +84,22 @@
 
                 <nav>
                     <ul>
-                    <li><a class="sida1">Hem</a></li>
-                    <li><a class="sida2">Övrigt</a></li>
-                    <li><a class="sida3">Kontakta</a></li>
+                    <li><a href="ar.php" class="sida1">الصفحة الرئيسية</a></li>
+                    <li><a href="ar.php" class="sida2">أخرى</a></li>
+                    <li><a href="ar.php" class="sida3">تواصل معنا</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <div class="DuaDiv">
+             <div class="DuaDiv">
                 <p style="margin-bottom: 15px;">
                     <span class="dagen" style="display: none;"></span>
-                    Gå till <a href="index.html">startsidan</a>
+                    انتقل إلى <a href="ar.php">الصفحة الرئيسية</a> 
                 </p>
             </div>
         </div>
 
     </div>
-    
 
 
     <section class="DateTime">
@@ -142,13 +147,13 @@
 
 
 
-       <footer class="foten">
-        <h2>Kontakta oss via:</h2>
+    <footer>
+        <h2>:اتصل بنا عبر</h2>
         <a href="mailto:alzahraa.forening@yahoo.se">alzahraa.forening@yahoo.se</a>
      </footer>
         <div id="slutet" class="slutet">
             <span>
-                <p>&copy; 2025 Alzahraa. Designed & Developed by <a href="https://github.com\MDweb6" target="_blank" rel="noopener">MDweb6</a></p>
+                <p>&copy; 2025 جمعية الزهراء </p>
             </span>
         </div>
 

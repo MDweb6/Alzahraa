@@ -1,22 +1,18 @@
+<?php
+
+require_once 'prayer_time.php';
+
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="arstyle.css">
+    <link rel="stylesheet" href="style.css">
     <title>Alzahraa Förening</title>
-
+<link rel="icon" href="...">
 
 <!--Fonts-->
-
-<!--CairoArFonts-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lalezar&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
 
 
 <!--Teko-->
@@ -47,23 +43,26 @@
 </head>
 <body>
     
+
     <header>
         <div class="head1">
-            <h1 id="LogoIndex">جمعية الزهراء</h1>
+            <h1 id="LogoIndex">Alzahraa Förening</h1>
         </div>
 
         <div class="head2">
             <nav>
                 <ul>
-                    <li><a href="ar.html" class="sida1">الصفحة الرئيسية</a></li>
-                    <li><a href="ar.html" class="sida2">أخرى</a></li>
-                    <li><a href="ar.html" class="sida3">تواصل معنا</a></li>
+                    <li><a href="index.php" class="sida1">Hem</a></li>
+                    <li><a href="index.php" class="sida2">Bönetider</a></li>
+                    <li><a href="index.php" class="sida3">Kontakta</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="HeadBtn">
-            <button class="VisaDua">دعاء يوم</button>
+            <button class="VisaDua" style="display: none;">Dagens Dua`a</button>
+            <p>Gå till <a href="index.php">startsidan</a></p>
+
         </div>
 
         <div class="head3">
@@ -84,22 +83,23 @@
 
                 <nav>
                     <ul>
-                    <li><a href="ar.html" class="sida1">الصفحة الرئيسية</a></li>
-                    <li><a href="ar.html" class="sida2">أخرى</a></li>
-                    <li><a href="ar.html" class="sida3">تواصل معنا</a></li>
+                    <li><a href="index.php" class="sida1">Hem</a></li>
+                    <li><a href="index.php" class="sida2">Övrigt</a></li>
+                    <li><a href="index.php" class="sida3">Kontakta</a></li>
                     </ul>
                 </nav>
             </div>
 
-             <div class="DuaDiv">
+            <div class="DuaDiv">
                 <p style="margin-bottom: 15px;">
                     <span class="dagen" style="display: none;"></span>
-                    انتقل إلى <a href="ar.html">الصفحة الرئيسية</a> 
+                    Gå till <a href="index.php">startsidan</a>
                 </p>
             </div>
         </div>
 
     </div>
+    
 
 
     <section class="DateTime">
@@ -110,50 +110,57 @@
       <div class="line-bg"></div>
 
       <!-- Markers + Labels -->
+      <div class="prayer-marker imsak" id="marker-imsak"></div>
+      <div class="prayer-time imsak"><?php echo "$imsak\n"; ?></div>
+      <div class="prayer-label imsak">Imsak <span>(الإمساك)</span></div>
+
       <div class="prayer-marker fajr" id="marker-fajr"></div>
-      <div class="prayer-time fajr"></div>
+      <div class="prayer-time fajr"><?php echo "$fajer\n"; ?></div>
       <div class="prayer-label fajr">Fajr <span>(الفجر)</span></div>
 
+      <div class="prayer-marker shurooq" id="marker-shurooq"></div>
+      <div class="prayer-time shurooq"><?php echo "$Shurooq\n"; ?></div>
+      <div class="prayer-label shurooq">Shurooq <span>(الشروق)</span></div>
+
       <div class="prayer-marker dhuhr" id="marker-dhuhr"></div>
-      <div class="prayer-time dhuhr"></div>
+      <div class="prayer-time dhuhr"><?php echo "$dhuhr\n"; ?></div>
       <div class="prayer-label dhuhr">Dhuhr <span>(الظهر)</span></div>
 
-      <div class="prayer-marker asr" id="marker-asr"></div>
-      <div class="prayer-time asr"></div>
-      <div class="prayer-label asr">Asr <span>(العصر)</span></div>
+      <div class="prayer-marker ghoroob" id="marker-ghoroob"></div>
+      <div class="prayer-time ghoroob"><?php echo "$ghoroob\n"; ?></div>
+      <div class="prayer-label ghoroob">Ghoroob <span>(غروب الشمس)</span></div>
 
       <div class="prayer-marker maghrib" id="marker-maghrib"></div>
-      <div class="prayer-time maghrib"></div>
+      <div class="prayer-time maghrib"><?php echo "$maghrib\n"; ?></div>
       <div class="prayer-label maghrib">Maghrib <span>(المغرب)</span></div>
 
-      <div class="prayer-marker isha" id="marker-isha"></div>
-      <div class="prayer-time isha"></div>
-      <div class="prayer-label isha">Isha <span>(العشاء)</span></div>
+      <div class="prayer-marker midnatt" id="marker-midnatt"></div>
+      <div class="prayer-time midnatt"><?php echo "$Correct_MN\n"; ?></div>
+      <div class="prayer-label midnatt">Midnatt <span>(منتصف الليل)</span></div>
     </div>
-  </div>
 
- 
-
-    </section>
+</section> 
 
 
 
+<section class="DuaHog">
 
 
     <section class="DuaBox">
-        <h2 class="DuaRubrik"></h2>
-        <span class="DuaSpan"></span>
+        <h2 class="DuaRubrik" style="font-family: 'Noto Naskh Arabic', sans-serif;"> dua </h2>
+        <span class="DuaSpan" style="font-family: 'Noto Naskh Arabic', sans-serif;"></span>
     </section>
 
+</section>
 
 
-    <footer>
-        <h2>:اتصل بنا عبر</h2>
+       <footer class="foten">
+        <h2>Kontakta oss via:</h2>
         <a href="mailto:alzahraa.forening@yahoo.se">alzahraa.forening@yahoo.se</a>
      </footer>
         <div id="slutet" class="slutet">
             <span>
-                <p>&copy; 2025 <a href="https://github.com\MDweb6" target="_blank" rel="noopener">MDweb6</a> جمعية الزهراء, التصميم والتطوير بواسطة </p>
+                <p>&copy; 2025 Alzahraa.</p>
             </span>
         </div>
 

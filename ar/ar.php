@@ -1,3 +1,11 @@
+<?php
+
+require_once '../prayer_time.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -113,28 +121,29 @@
 
       <!-- Markers + Labels -->
       <div class="prayer-marker fajr" id="marker-fajr"></div>
-      <div class="prayer-time fajr"></div>
+      <div class="prayer-time fajr"><?php echo "$fajer\n"; ?></div>
       <div class="prayer-label fajr">Fajr <span>(الفجر)</span></div>
 
       <div class="prayer-marker dhuhr" id="marker-dhuhr"></div>
-      <div class="prayer-time dhuhr"></div>
+      <div class="prayer-time dhuhr"><?php echo "$dhuhr\n"; ?></div>
       <div class="prayer-label dhuhr">Dhuhr <span>(الظهر)</span></div>
 
       <div class="prayer-marker asr" id="marker-asr"></div>
-      <div class="prayer-time asr"></div>
+      <div class="prayer-time asr"><?php echo "$asr\n"; ?></div>
       <div class="prayer-label asr">Asr <span>(العصر)</span></div>
 
       <div class="prayer-marker maghrib" id="marker-maghrib"></div>
-      <div class="prayer-time maghrib"></div>
+      <div class="prayer-time maghrib"><?php echo "$maghrib\n"; ?></div>
       <div class="prayer-label maghrib">Maghrib <span>(المغرب)</span></div>
 
       <div class="prayer-marker isha" id="marker-isha"></div>
-      <div class="prayer-time isha"></div>
+      <div class="prayer-time isha"><?php echo "$isha\n"; ?></div>
       <div class="prayer-label isha">Isha <span>(العشاء)</span></div>
     </div>
   </div>
 
- 
+   <div class="AllPray" > <h5><a href="../AllPray.php">جميع أوقات الصلوات</a></h5></div>
+
 
     </section>
 
@@ -242,7 +251,7 @@
      </footer>
         <div id="slutet" class="slutet">
             <span>
-                <p>&copy; 2025 <a href="https://github.com\MDweb6" target="_blank" rel="noopener">MDweb6</a> جمعية الزهراء, التصميم والتطوير بواسطة </p>
+                <p>&copy; 2025 جمعية الزهراء  </p>
             </span>
         </div>
 

@@ -177,12 +177,31 @@ header{
       color: #666;
     }
 
-    .fajr { left: 10%; }
-    .dhuhr { left: 30%; }
-    .asr { left: 50%; }
-    .maghrib { left: 70%; }
-    .isha { left: 90%; }
+.imsak   { left: 10%; }
+.fajr    { left: 23%; }
+.shurooq { left: 36%; }
+.dhuhr   { left: 49%; }
+.ghoroob { left: 62%; }
+.maghrib { left: 75%; }
+.midnatt { left: 89.5%; }
 
+
+
+
+.AllPray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+.AllPray h5 a{
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    border: 2px dotted gray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
 
 .NavForMobile{
     display: none;
@@ -270,7 +289,7 @@ header{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    height: 120vh;
+    height: 100vh;
     margin-top: 20px;
 }
 .bilden{
@@ -278,8 +297,8 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 95%;
-    height: 55%;
+    width: 80%;
+    height: 60%;
     display: flex;
     justify-content: left;
     align-items: end;
@@ -292,19 +311,22 @@ header{
     background-color: #4caf50;
 }
 .OmTexten{
-    width: 95%;
-    height: 40%;
+    width: 80%;
+    height: 30%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #FFFDF6;
+    background-color: #F5F5DC;
+    border-radius: 0px 0px 15px 15px;
 }
 .OmTexten h2{
     font-family: 'poppins',sans-serif;
     border-bottom: 2px solid #4caf50;
-    width: 13%;
+    width: 11%;
     color: #333;
+    display: flex;
+    justify-content: center;
 }
 .OmTexten p{
     font-family: 'quicksand', sans-serif;
@@ -315,15 +337,148 @@ header{
     color: #4caf50;
 }
 
+.DuaReklam{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaBox2{
+    background-color: #4caf50;
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.DuaImg{
+    width:30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaImg span{
+    font-size: 14rem;
+}
+.DuaImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.DuaTxt{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.DuaTxt h2{
+    color: #FFFDF6;
+    font-family: 'poppins', sans-serif;
+}
+.DuaTxt p{
+    color: #FFFDF6;
+    font-family: 'quicksand', sans-serif;
+    width: 80%;
+}
+.DuaTxt button{
+    padding: 10px;
+    background-color: #faf3dc;
+    border: none;
+    border-radius: 15px;
+    width: 70%;
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+.VikCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.bontideralla{
+    background-color: #4caf50;
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.hed{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+.hed h2{
+    color: #FFFDF6;
+    font-family: 'poppins', sans-serif;
+}
+.Vikss{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Vikbox{
+    background-color: #FFFDF6;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 20px;
+}
+.Vikbox h3{
+    font-family: 'poppins', sans-serif;
+    border-bottom: 2px solid #4caf50;
+}
+.Vikbox p{
+    font-family: 'poppins', sans-serif;
+    font-size: smaller;
+    width: 80%;
+}
+.Vikbox button{
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+}
+.Vikbox button a{
+    color: #fff;
+    font-size: 1rem;
+}
 .OvSec{
     width: 100%;
     height: 80vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
-.OvSec h2{
+.h2Head{
+    height: 10%;
+    border-bottom: 2px solid #4caf50;
+    display: flex;
+    align-items: end;
+    width: 78%;
+}
+.h2Head h2{
     font-family: 'Poppins';
     background-color: #4caf50;
     color: #fff;
@@ -335,8 +490,7 @@ header{
 }
 .Container{
     width: 98%;
-    height: 95%;
-    border-top: 2px solid #4caf50;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,7 +534,7 @@ footer{
     margin-top: 80px;
     width: 100%;
     background-color: beige;
-    height: 20vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -394,13 +548,14 @@ footer a{
     text-decoration: none;
 }
 .slutet{
-    background-color: #FFFDF6;
+    background-color: #337e35;
     height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .slutet span{
+    color: #fff;
     font-size: 1rem;
     font-family: 'poppins',sans-serif;
 }
@@ -437,6 +592,89 @@ footer a{
 }
 
 /*Dua.html css*/
+
+.DuaHog{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaBox {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    border: 6px solid #2e7d32;
+
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    text-align: center;
+}
+
+/* Titel */
+.DuaRubrik {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+/* Text */
+.DuaSpan {
+    display: block;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    font-family: 'Noto Naskh Arabic', serif;
+
+    /* viktigt: gör att text bryts snyggt */
+    word-wrap: break-word;
+}
+
+/* 📱 Mobil */
+@media (max-width: 600px) {
+
+    .DuaHog{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .DuaBox {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .DuaRubrik {
+        font-size: 18px;
+    }
+
+    .DuaSpan {
+        font-size: 15px;
+        color: #000;
+    font-family: 'Noto Naskh Arabic', serif;
+    }
+}
+
+/* 📺 Stor skärm (moské display) */
+@media (min-width: 1000px) {
+
+    .DuaRubrik {
+        font-size: 24px;
+    }
+
+    .DuaSpan {
+        font-size: 18px;
+        color: #000;
+    font-family: 'Noto Naskh Arabic', serif;
+    }
+}
+/*
 .DuaBox{
     margin-top: 10px;
     width: 100%;
@@ -465,7 +703,7 @@ footer a{
     background-color: beige;
 }
 
-
+*/
 
 @media (max-width: 768px){
     
@@ -627,6 +865,41 @@ body{
     font-size: 1rem;
 }
 
+  .timeline {
+    height: 80px;
+  }
+
+  .line-bg {
+    left: 5%;
+    width: 90%;
+  }
+
+  .prayer-time {
+    font-size: 0.6rem;
+    top: calc(50% - 35px);
+  }
+
+  .prayer-label {
+    font-size: 0.55rem;
+    top: calc(50% + 12px);
+  }
+
+  .prayer-label span {
+    font-size: 0.5rem;
+  }
+
+  /* 📍 justera positioner för mobil (mer luft) */
+  .imsak   { left: 5%; }
+  .fajr    { left: 20%; }
+  .shurooq { left: 34%; }
+  .dhuhr   { left: 47%; }
+  .ghoroob { left: 60%; }
+  .maghrib { left: 75%; }
+  .midnatt { left: 92%; }
+
+
+
+
 .SprakSkrift{
     position: fixed;
     bottom: 20px;
@@ -717,7 +990,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 95%;
+    width: 90%;
     height: 45%;
     display: flex;
     justify-content: left;
@@ -730,7 +1003,7 @@ body{
     background-color: #4caf50;
 }
 .OmTexten{
-    width: 98%;
+    width: 90%;
     height: 60%;
     padding: 16px;
     display: flex;
@@ -750,6 +1023,137 @@ body{
 .OmTexten p strong{
     color: #4caf50;
 }
+
+.DuaReklam{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaBox2{
+    background-color: #4caf50;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.DuaImg{
+    width:80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaImg span{
+    font-size: 7rem;
+}
+.DuaImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.DuaTxt{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+}
+.DuaTxt h2{
+    color: #FFFDF6;
+    font-family: 'poppins', sans-serif;
+}
+.DuaTxt p{
+    color: #FFFDF6;
+    font-family: 'quicksand', sans-serif;
+    width: 80%;
+}
+.DuaTxt button{
+    padding: 10px;
+    background-color: #faf3dc;
+    border: none;
+    border-radius: 15px;
+    width: 70%;
+}
+.DuaTxt button a{
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.VikCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+}
+
+.bontideralla{
+    background-color: #4caf50;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.hed{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hed h2{
+    color: #FFFDF6;
+    font-family: 'poppins', sans-serif;
+}
+.Vikss{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Vikbox{
+    background-color: #FFFDF6;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+}
+.Vikbox p{
+    font-family: 'poppins', sans-serif;
+    font-size: smaller;
+    width: 80%;
+    height: 80%;
+}
+.Vikbox button{
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+}
+.Vikbox button a{
+    color: #fff;
+    font-size: 1rem;
+}
+
+
 
 
 
@@ -829,8 +1233,8 @@ body{
 footer{
     margin-top: 40px;
     width: 100%;
-    background-color: beige;
-    height: 20vh;
+    background-color: #F5F5DC;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -875,6 +1279,7 @@ footer{
 
 /*Dua.html css*/
 
+/*
 .DuaBox{
     width: 100%;
     height: 160vh;
@@ -901,7 +1306,7 @@ footer{
     background-color: beige;
 }
 
-
+*/
 
 
 }
