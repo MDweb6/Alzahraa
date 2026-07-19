@@ -184,13 +184,28 @@ header{
       color: #666;
     }
 
-    .fajr { left: 10%; }
-    .dhuhr { left: 30%; }
-    .asr { left: 50%; }
-    .maghrib { left: 70%; }
-    .isha { left: 90%; }
+.imsak   { left: 10%; }
+.fajr    { left: 23%; }
+.shurooq { left: 36%; }
+.dhuhr   { left: 49%; }
+.ghoroob { left: 62%; }
+.maghrib { left: 75%; }
+.midnatt { left: 89.5%; }
 
-
+.AllPray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+.AllPray h5 a{
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    border: 2px dotted gray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
 
 
 .AllPray{
@@ -299,7 +314,7 @@ header{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    height: 120vh;
+    height: 100vh;
     margin-top: 20px;
 }
 .bilden{
@@ -307,8 +322,8 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 95%;
-    height: 55%;
+    width: 80%;
+    height: 60%;
     display: flex;
     justify-content: right;
     align-items: end;
@@ -321,22 +336,23 @@ header{
     background-color: #4caf50;
 }
 .OmTexten{
-    width: 95%;
-    height: 40%;
+    width: 80%;
+    height: 30%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
     gap: 20px;
-    background-color: #FFFDF6;
+    background-color: #F5F5DC;
+    border-radius: 0px 0px 15px 15px;
 }
 .OmTexten h2{
     font-family: "Noto Kufi Arabic", sans-serif;
     border-bottom: 2px solid #4caf50;
-    width: 13%;
+    width: 11%;
     color: #333;
-    text-align: right;
+    text-align: center;
 }
 .OmTexten p{
     font-family: 'quicksand', sans-serif;
@@ -348,6 +364,70 @@ header{
     color: #4caf50;
 }
 
+.DuaReklam{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaBox2{
+    background-color: #4caf50;
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.DuaImg{
+    width:30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaImg span{
+    font-size: 14rem;
+}
+.DuaImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.DuaTxt{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.DuaTxt h2{
+    color: #FFFDF6;
+    font-family: 'noto kufi arabic', sans-serif;
+}
+.DuaTxt p{
+    color: #FFFDF6;
+    font-family: 'noto kufi arabic', sans-serif;
+    width: 80%;
+    text-align: center;
+}
+.DuaTxt button{
+    padding: 6px;
+    background-color: #faf3dc;
+    border: none;
+    border-radius: 15px;
+    width: 70%;
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Cairo';
+
+}
 
 .OvSec{
     width: 100%;
@@ -419,7 +499,7 @@ footer{
     margin-top: 80px;
     width: 100%;
     background-color: beige;
-    height: 20vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -433,13 +513,14 @@ footer a{
     text-decoration: none;
 }
 .slutet{
-    background-color: #FFFDF6;
+    background-color: #337e35;
     height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .slutet span{
+    color: #fff;
     font-size: 1rem;
     font-family: 'poppins',sans-serif;
 }
@@ -652,6 +733,43 @@ body{
 
 }
 
+
+ .timeline {
+    height: 80px;
+  }
+
+  .line-bg {
+    left: 5%;
+    width: 90%;
+  }
+
+  .prayer-time {
+    font-size: 0.6rem;
+    top: calc(50% - 35px);
+  }
+
+  .prayer-label {
+    font-size: 0.55rem;
+    top: calc(50% + 12px);
+  }
+
+  .prayer-label span {
+    font-size: 0.5rem;
+  }
+
+  /* 📍 justera positioner för mobil (mer luft) */
+  .imsak   { left: 5%; }
+  .fajr    { left: 20%; }
+  .shurooq { left: 34%; }
+  .dhuhr   { left: 47%; }
+  .ghoroob { left: 60%; }
+  .maghrib { left: 75%; }
+  .midnatt { left: 92%; }
+
+
+
+
+
 .SprakSkrift{
     position: fixed;
     bottom: 20px;
@@ -744,7 +862,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 95%;
+    width: 90%;
     height: 45%;
     display: flex;
     justify-content: right;
@@ -757,7 +875,7 @@ body{
     background-color: #4caf50;
 }
 .OmTexten{
-    width: 98%;
+    width: 90%;
     height: 60%;
     padding: 16px;
     display: flex;
@@ -772,13 +890,77 @@ body{
 .OmTexten p{
     width: 98%;
     font-size: 1.1rem;
+    font-family: 'Noto Kufi Arabic', sans-serif;
 }
 .OmTexten p strong{
     color: #4caf50;
 }
 
 
-
+.DuaReklam{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaBox2{
+    background-color: #4caf50;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.DuaImg{
+    width:80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DuaImg span{
+    font-size: 7rem;
+}
+.DuaImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.DuaTxt{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+}
+.DuaTxt h2{
+    color: #FFFDF6;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+.DuaTxt p{
+    color: #FFFDF6;
+    font-family: 'Cairo', sans-serif;
+    width: 80%;
+}
+.DuaTxt button{
+    padding: 10px;
+    background-color: #faf3dc;
+    border: none;
+    border-radius: 15px;
+    width: 70%;
+}
+.DuaTxt button a{
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+}
 
 .OvSec{
     width: 100%;
@@ -857,7 +1039,7 @@ footer{
     margin-top: 40px;
     width: 100%;
     background-color: beige;
-    height: 20vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;

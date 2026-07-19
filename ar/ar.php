@@ -51,6 +51,126 @@ require_once '../prayer_time.php';
 <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
 
 
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .containerr {
+        max-width: 1500px;
+        margin: 20px auto;
+        background: #F5F5DC;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .date {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .arabic {
+        direction: rtl;
+        font-family: "Noto Kufi Arabic", sans-serif;
+        font-size: 0.9rem;
+    }
+    .Engg {
+        font-family: "Noto Kufi Arabic", sans-serif;
+        font-size: 0.9rem;
+    }
+    .date-label {
+    display: block;
+    font-size: 1rem;
+    color: black;
+
+    }
+    .countdown {
+        text-align: center;
+        font-size: 18px;
+        margin: 15px 0;
+        font-weight: medium;
+        color: #A0C878;
+        font-family: "Noto Kufi Arabic", sans-serif;
+    }
+
+    .countdownArabic {
+        text-align: center;
+        font-size: 18px;
+        margin: 15px 0;
+        font-weight: medium;
+        color: #A0C878;
+        font-family: "Noto Kufi Arabic", sans-serif;
+    }
+
+    .next-name {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .next-name span {
+        display: block;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background: #337e35;
+        color: white;
+    }
+    td{
+        background: #fff;
+    }
+    .next {
+        background-color: #e6f0ff;
+        font-weight: bold;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+        .containerr {
+            height: 95vh;
+            width: 90%;
+        }
+
+        .date {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .prayer { font-size:16px; } 
+    }
+</style>
+
+
+
 </head>
 <body>
     
@@ -120,29 +240,36 @@ require_once '../prayer_time.php';
       <div class="line-bg"></div>
 
       <!-- Markers + Labels -->
+      <div class="prayer-marker imsak" id="marker-imsak"></div>
+      <div class="prayer-time imsak"><?php echo "$imsak\n"; ?></div>
+      <div class="prayer-label imsak">Imsak <span>(الإمساك)</span></div>
+
       <div class="prayer-marker fajr" id="marker-fajr"></div>
       <div class="prayer-time fajr"><?php echo "$fajer\n"; ?></div>
       <div class="prayer-label fajr">Fajr <span>(الفجر)</span></div>
+
+      <div class="prayer-marker shurooq" id="marker-shurooq"></div>
+      <div class="prayer-time shurooq"><?php echo "$Shurooq\n"; ?></div>
+      <div class="prayer-label shurooq">Shurooq <span>(الشروق)</span></div>
 
       <div class="prayer-marker dhuhr" id="marker-dhuhr"></div>
       <div class="prayer-time dhuhr"><?php echo "$dhuhr\n"; ?></div>
       <div class="prayer-label dhuhr">Dhuhr <span>(الظهر)</span></div>
 
-      <div class="prayer-marker asr" id="marker-asr"></div>
-      <div class="prayer-time asr"><?php echo "$asr\n"; ?></div>
-      <div class="prayer-label asr">Asr <span>(العصر)</span></div>
+      <div class="prayer-marker ghoroob" id="marker-ghoroob"></div>
+      <div class="prayer-time ghoroob"><?php echo "$ghoroob\n"; ?></div>
+      <div class="prayer-label ghoroob">Ghoroob <span>(غروب الشمس)</span></div>
 
       <div class="prayer-marker maghrib" id="marker-maghrib"></div>
       <div class="prayer-time maghrib"><?php echo "$maghrib\n"; ?></div>
       <div class="prayer-label maghrib">Maghrib <span>(المغرب)</span></div>
 
-      <div class="prayer-marker isha" id="marker-isha"></div>
-      <div class="prayer-time isha"><?php echo "$isha\n"; ?></div>
-      <div class="prayer-label isha">Isha <span>(العشاء)</span></div>
+      <div class="prayer-marker midnatt" id="marker-midnatt"></div>
+      <div class="prayer-time midnatt"><?php echo "$Correct_MN\n"; ?></div>
+      <div class="prayer-label midnatt">Midnatt <span>(منتصف الليل)</span></div>
     </div>
-  </div>
 
-   <div class="AllPray" > <h5><a href="../AllPray.php">جميع أوقات الصلوات</a></h5></div>
+   <div class="AllPray" > <h5><a href="#AllBon">جميع أوقات الصلوات</a></h5></div>
 
 
     </section>
@@ -192,6 +319,178 @@ require_once '../prayer_time.php';
     
 
 
+    <section class="DuaReklam" id="DuaReklam">
+        <div class="DuaBox2">
+
+            <div class="DuaImg">
+                <!-- <img src="images/DuaImg.png" alt="Dagens Dua"> -->
+                 <span>🤲</span>
+            </div>
+
+            <div class="DuaTxt">
+                <h2>دعاء اليوم</h2>
+                <p>
+                    هنا يمكنك رؤية دعاء اليوم. يتم عرض دعاء جديد كل يوم، أي (الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد). انقر على الزر أدناه لرؤية دعاء اليوم والتعرّف أكثر على معناه                
+                </p>
+
+                <button onclick="window.location.href='../Dua.php'">
+                    عرض دعاء اليوم                
+                </button>
+
+        </div>
+    </section>
+
+
+
+<div class="containerr" id="AllBon">
+
+        <div class="date">
+
+            <div class="date-box">
+                <span class="date-label Engg">Svenskt datum</span>
+                <div class="date-main">
+                    <?php echo "$vDagSv $DateDayM $MonthM $YearM"; ?>
+                </div>
+            </div>
+
+            <div class="date-box">
+                <span class="date-label arabic">التاريخ الهجري</span>
+                <div class="date-hijri arabic">
+                    <?php echo $hijriDateFull; ?>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="countdown" id="countdown"></div>
+        <div class="countdownArabic" id="countdownArabic"></div>
+
+        <table id="prayerTable">
+            <tr>
+                <th class="Engg">Bön</th>
+                <th class="arabic">الصلاة</th>
+                <th class="Engg">Tid</th>
+            </tr>
+            <tr data-name="Imsak" data-ar="الإمساك" data-time="<?php echo $imsak; ?>">
+                <td class="Engg">Imsak</td>
+                <td class="arabic">الإمساك</td>
+                <td class="Engg"><?php echo $imsak; ?></td>
+            </tr>
+            <tr data-name="Fajr" data-ar="الفجر" data-time="<?php echo $fajer; ?>">
+                <td class="Engg">Fajr</td>
+                <td class="arabic">الفجر</td>
+                <td class="Engg"><?php echo $fajer; ?></td>
+            </tr>
+            <tr data-name="Shurooq" data-ar="الشروق" data-time="<?php echo $Shurooq; ?>">
+                <td class="Engg">Shurooq</td>
+                <td class="arabic">الشروق</td>
+                <td class="Engg"><?php echo $Shurooq; ?></td>
+            </tr>
+            <tr data-name="Dhuhr" data-ar="الظهر" data-time="<?php echo $dhuhr; ?>">
+                <td class="Engg">Dhuhr</td>
+                <td class="arabic">الظهر</td>
+                <td class="Engg"><?php echo $dhuhr; ?></td>
+            </tr>
+            <tr data-name="Ghoroob" data-ar="غروب الشمس" data-time="<?php echo $ghoroob; ?>">
+                <td class="Engg">Ghoroob</td>
+                <td class="arabic">غروب الشمس</td>
+                <td class="Engg"><?php echo $ghoroob; ?></td>
+            </tr>
+            <tr data-name="Maghrib" data-ar="المغرب" data-time="<?php echo $maghrib; ?>">
+                <td class="Engg">Maghrib</td>
+                <td class="arabic">المغرب</td>
+                <td class="Engg"><?php echo $maghrib; ?></td>
+            </tr>
+            <tr data-name="Midnatt" data-ar="منتصف الليل" data-time="<?php echo $Correct_MN; ?>">
+                <td class="Engg">Midnatt</td>
+                <td class="arabic">منتصف الليل</td>
+                <td class="Engg"><?php echo $Correct_MN; ?></td>
+            </tr>
+        </table>
+
+</div>
+
+
+
+<script>
+function parseTime(str) {
+    let [h, m] = str.split(':');
+    let d = new Date();
+    d.setHours(parseInt(h), parseInt(m), 0, 0);
+    return d;
+}
+
+function updateCountdown() {
+    let now = new Date();
+
+    let allowedPrayers = ["Fajr", "Dhuhr", "Maghrib"];
+
+    let rows = document.querySelectorAll("#prayerTable tr[data-time]");
+    let nextPrayer = null;
+    let nextRow = null;
+    let nextName = "";
+    let nextAr = "";
+
+    rows.forEach(row => {
+        let name = row.dataset.name;
+
+        if (!allowedPrayers.includes(name)) return;
+
+        let time = parseTime(row.dataset.time);
+
+        if (time > now && !nextPrayer) {
+            nextPrayer = time;
+            nextRow = row;
+            nextName = name;
+            nextAr = row.dataset.ar;
+        }
+    });
+
+    // Om inga kvar idag → Fajr imorgon
+    if (!nextPrayer) {
+        let fajrRow = document.querySelector('tr[data-name="Fajr"]');
+
+        if (!fajrRow) return; // säkerhet
+
+        let fajr = parseTime(fajrRow.dataset.time);
+        fajr.setDate(fajr.getDate() + 1);
+
+        nextPrayer = fajr;
+        nextRow = fajrRow;
+        nextName = "Fajr";
+        nextAr = fajrRow.dataset.ar;
+    }
+
+    // Markera
+    rows.forEach(r => r.classList.remove("next"));
+    if (nextRow) nextRow.classList.add("next");
+
+    let diff = Math.floor((nextPrayer - now) / 1000);
+
+    let h = Math.floor(diff / 3600);
+    let m = Math.floor((diff % 3600) / 60);
+    let s = diff % 60;
+
+    // Svenska
+    document.getElementById("countdown").innerText =
+        nextName + " bön om " + h + "h " + m + "m " + s + "s";
+
+    // Arabiska
+    document.getElementById("countdownArabic").innerText =
+        "صلاة " + nextAr + " بعد " + h + "س " + m + "د " + s + "ث";
+}
+
+// STARTA scriptet
+setInterval(updateCountdown, 1000);
+updateCountdown();
+    </script>
+
+
+
+
+
+<!--    
+
     <section class="OvSec" id="OvSec">
         <h2>أخرى</h2>
         <div class="Container">
@@ -232,7 +531,7 @@ require_once '../prayer_time.php';
         </div>
     </section>
 
-
+-->
 
 
      <div class="loader-modal" id="loaderModal">
